@@ -1,3 +1,4 @@
+// Массив объектов с данными об изображениях
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -25,7 +26,10 @@ const images = [
   },
 ];
 
+// Получаем ссылку на элемент списка в DOM
 const ul = document.querySelector('.gallery');
+
+// Создаем разметку изображений, используя данные из массива объектов
 const markup = images
   .map(
     image =>
@@ -34,4 +38,6 @@ const markup = images
       </li>`
   )
   .join('');
+
+// Вставляем сгенерированную разметку в список
 ul.insertAdjacentHTML('beforeend', markup);
